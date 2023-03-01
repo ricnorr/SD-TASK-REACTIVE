@@ -33,7 +33,7 @@ public class Good {
                 convertedPrice = price;
             }
         }
-        return String.format("Product{name=%s, price=%d}", name, convertedPrice);
+        return String.format("Product{name='%s', price=%d}", name, convertedPrice);
 
     }
 }

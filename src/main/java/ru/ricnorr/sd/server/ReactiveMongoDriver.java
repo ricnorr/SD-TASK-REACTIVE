@@ -55,6 +55,6 @@ class ReactiveMongoDriver {
     }
 
     static private MongoClient createMongoClient() {
-        return MongoClients.create("mongodb://localhost:27017");
+        return MongoClients.create("mongodb://127.0.0.1:27017");
     }
 }

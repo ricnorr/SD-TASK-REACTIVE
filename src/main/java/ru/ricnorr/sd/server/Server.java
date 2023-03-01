@@ -66,6 +66,6 @@ public class Server {
         var userId = Integer.parseInt(requestParams.get(User.ID).stream().findAny().get());
         var goods = ReactiveMongoDriver.goods();
 
-        return ReactiveMongoDriver.getUser(userId).map(u -> u.currencyType).flatMap(currency -> goods.map(g -> g.toString(currency)));
+        return ReactiveMongoDriver.getUser(userId).map(u -> u.currencyType).flatMap(currencyType -> goods.map(g -> g.toString(currencyType)));
     }
 }

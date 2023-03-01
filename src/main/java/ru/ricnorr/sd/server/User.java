@@ -20,11 +20,11 @@ public class User {
     }
 
     public Document getDocument() {
-        return new Document(ID, id).append(CURRENCY, currencyType);
+        return new Document(ID, id).append(CURRENCY, currencyType.toString());
     }
 
     @Override
     public String toString() {
-        return String.format("User{id=%d,currencyType=%s}", id, currencyType);
+        return String.format("User{id=%d,currencyType='%s'}", id, currencyType);
     }
 }
